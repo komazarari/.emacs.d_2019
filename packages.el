@@ -11,6 +11,7 @@
 (defvar my-packages
   '(
     init-loader
+    exec-path-from-shell
     cl-lib
     haml-mode
     ruby-mode
@@ -25,6 +26,7 @@
     auto-complete
     rinari
     helm
+    magit
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
