@@ -6,9 +6,6 @@
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
 (package-initialize)
 
-(pkg-sync 'exec-path-from-shell require
-(exec-path-from-shell-initialize))
-
 ;;; el-get
 (add-to-list 'load-path (locate-user-emacs-file "./.emacs.d/elisp/el-get"))
 (unless (require 'el-get nil t)
