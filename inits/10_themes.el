@@ -1,0 +1,6 @@
+;(load-theme 'misterioso t)
+;(load-theme 'tango-dark t)
+;(load-theme 'desert t)
+;(load-theme 'gray30 t)
+(load-theme 'clarity t)
+;(load-theme 'subdued t)
