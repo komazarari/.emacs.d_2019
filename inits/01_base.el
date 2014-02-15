@@ -11,6 +11,7 @@
             backup-directory-alist))
 
 ;; languages, encodings
+(set-language-environment "Japanese")
 (setq default-buffer-file-coding-system 'utf-8-unix)
 (set-buffer-file-coding-system 'utf-8-unix)
 (set-terminal-coding-system 'utf-8-unix)
@@ -19,7 +20,6 @@
 (prefer-coding-system 'utf-8-unix)
 (set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8-unix)
-(set-language-environment "Japanese")
 (setq locale-coding-system 'utf-8)
 
 ;; yes-noの選択肢をy-nにする
