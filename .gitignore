@@ -1,3 +1,4 @@
+*.dat
 auto-save-list
 elisp/elpa/*
 elisp/el-get/*

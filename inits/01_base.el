@@ -36,6 +36,13 @@
 (column-number-mode 1)
 
 ;; タブ、行末の空白を可視化
+(defface my-face-b-1 '((t (:background "gray"))) nil)
+(defface my-face-b-2 '((t (:background "gray26"))) nil)
+(defface my-face-u-1 '((t (:foreground "SteelBlue" :underline t))) nil)
+(defvar my-face-b-1 'my-face-b-1)
+(defvar my-face-b-2 'my-face-b-2)
+(defvar my-face-u-1 'my-face-u-1)
+
 (defadvice font-lock-mode (before my-font-lock-mode ())
   (font-lock-add-keywords
    major-mode

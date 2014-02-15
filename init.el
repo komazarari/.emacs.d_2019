@@ -1,4 +1,5 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
+(require 'cl)
 
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))

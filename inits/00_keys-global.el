@@ -11,8 +11,12 @@
 (global-set-key "\C-z" 'scroll-down)
 (global-set-key "\C-\M-y" 'insert-register)
 
+;; 分割時に C-x p で逆戻り
 (define-key ctl-x-map "p"
   #'(lambda (arg) (interactive "p") (other-window (- arg))))
+
+(global-set-key "\C-c\C-q" 'indent-region) ;
+(global-set-key "\C-c\C-r" 'query-replace-regexp) ;
 
 ;; for osx
 (when (eq system-type 'darwin)

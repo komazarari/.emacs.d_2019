@@ -11,18 +11,20 @@
 (defvar my-packages
   '(
     init-loader
+    cl-lib
     haml-mode
     ruby-mode
     markdown-mode
     scss-mode
     yaml-mode
     ido
-    rinari
     yasnippet
     inf-ruby
     ruby-electric
+    fuzzy
     auto-complete
-;    helm
+    rinari
+    helm
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
