@@ -2,6 +2,7 @@
 ;;; package.el
 (require 'package)
 (setq package-user-dir "~/.emacs.d/elisp/elpa/")
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
 (package-initialize)
@@ -9,6 +10,7 @@
 
 (defvar my-packages
   '(
+    init-loader
     haml-mode
     ruby-mode
     markdown-mode
@@ -20,6 +22,7 @@
     inf-ruby
     ruby-electric
     auto-complete
+;    helm
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
