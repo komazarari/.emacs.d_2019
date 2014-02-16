@@ -27,6 +27,8 @@
     rinari
     helm
     magit
+    multiple-cursors
+    region-bindings-mode
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))

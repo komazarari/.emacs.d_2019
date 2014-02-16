@@ -9,3 +9,4 @@
 
 (global-set-key (kbd "C-@") 'helm-M-x)
 (global-set-key (kbd "C-:") 'helm-mini)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)

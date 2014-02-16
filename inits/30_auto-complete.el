@@ -4,6 +4,7 @@
 
 (ac-set-trigger-key "TAB")
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+(define-key ac-mode-map (kbd "<C-tab>") 'auto-complete)
 (setq ac-auto-start 6)
 
 (add-to-list 'ac-user-dictionary-files "~/.emacs.d/ac-dict")

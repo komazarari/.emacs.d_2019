@@ -1,5 +1,7 @@
 (setq inhibit-startup-screen t)
-(setq show-paren-mode 1)
+;(setq show-paren-mode 1)
+(show-paren-mode nil)
+(show-paren-mode 1)
 
 ;; no auto save file
 (setq auto-save-default nil)
@@ -30,6 +32,9 @@
 
 ;; リージョンの色反転なし
 (setq transient-mark-mode nil)
+
+;; スクラッチメッセージ
+(setq initial-scratch-message "")
 
 ;; 行番号・桁番号を表示
 (line-number-mode 1)

@@ -11,4 +11,8 @@
 
 ;;; load config files
 (require 'init-loader)
+(setq init-loader-show-log-after-init nil) ; 起動時のログ非表示
 (init-loader-load (locate-user-emacs-file "./inits"))
+
+(if (not (equal (init-loader-error-log) "")) ; エラーがあったら出す
+    (init-loader-show-log))
