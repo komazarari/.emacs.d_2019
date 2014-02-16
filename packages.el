@@ -7,6 +7,8 @@
 (add-to-list 'package-archives '("tromey" . "http://tromey.com/elpa/"))
 (package-initialize)
 
+(unless package-archive-contents
+    (package-refresh-contents))
 
 (defvar my-packages
   '(
