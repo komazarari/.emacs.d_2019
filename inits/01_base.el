@@ -31,7 +31,7 @@
 (setq-default tab-width 4 indent-tabs-mode nil)
 
 ;; リージョンの色反転なし
-(setq transient-mark-mode nil)
+;(setq transient-mark-mode nil)
 
 ;; スクラッチメッセージ
 (setq initial-scratch-message "")

@@ -6,3 +6,4 @@ elisp/el-get/*
 .backup
 tramp
 server
+.mc-lists.el
