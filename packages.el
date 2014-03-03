@@ -31,6 +31,7 @@
     magit
     multiple-cursors
     region-bindings-mode
+    coffee-mode
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
