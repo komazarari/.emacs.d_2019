@@ -1,2 +1,2 @@
 (when window-system
-  (set-frame-parameter nil 'alpha 75))
+  (set-frame-parameter nil 'alpha 85))
