@@ -17,6 +17,7 @@
     cl-lib
     haml-mode
     ruby-mode
+    rspec-mode
     markdown-mode
     scss-mode
     yaml-mode
