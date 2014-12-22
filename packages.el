@@ -18,6 +18,7 @@
     haml-mode
     ruby-mode
     rspec-mode
+    php-mode
     markdown-mode
     scss-mode
     yaml-mode
@@ -34,6 +35,7 @@
     region-bindings-mode
     coffee-mode
     edit-server
+    feature-mode
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
