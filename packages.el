@@ -36,6 +36,7 @@
     coffee-mode
     edit-server
     feature-mode
+    smart-compile
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
