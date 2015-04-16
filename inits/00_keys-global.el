@@ -22,4 +22,6 @@
 (when (eq system-type 'darwin)
   (setq ns-command-modifier (quote meta))
   (setq ns-alternate-modifier (quote super))
+  (define-key global-map [?¥] [?\\])
+  (global-set-key "\M-_" 'delete-horizontal-space)
   )

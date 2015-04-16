@@ -18,6 +18,7 @@
     haml-mode
     ruby-mode
     rspec-mode
+    rbenv
     php-mode
     markdown-mode
     scss-mode
@@ -37,6 +38,10 @@
     edit-server
     feature-mode
     smart-compile
+    ctags-update
+    haskell-mode
+    ac-haskell-process
+    flymake-haskell-multi
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))

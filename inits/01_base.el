@@ -12,6 +12,9 @@
       (cons (cons "\\.*$" (expand-file-name "~/.emacs.d/.backup"))
             backup-directory-alist))
 
+;; 最近ひらいたファイル
+(recentf-mode 1)
+
 ;; languages, encodings
 (set-language-environment "Japanese")
 (setq default-buffer-file-coding-system 'utf-8-unix)
