@@ -42,6 +42,7 @@
     haskell-mode
     ac-haskell-process
     flymake-haskell-multi
+    smartparens
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))

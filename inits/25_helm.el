@@ -8,5 +8,7 @@
   (kill-new (buffer-substring (point) (field-end))))
 
 (global-set-key (kbd "C-@") 'helm-M-x)
+(global-set-key (kbd "M-[") 'helm-M-x)
+(global-set-key (kbd "C-;") 'helm-mini)
 (global-set-key (kbd "C-:") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
