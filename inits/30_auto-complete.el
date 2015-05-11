@@ -6,6 +6,7 @@
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 (define-key ac-mode-map (kbd "<C-tab>") 'auto-complete)
 (setq ac-auto-start 6)
+(setq ac-use-fuzzy t)
 
 (add-to-list 'ac-user-dictionary-files "~/.emacs.d/ac-dict")
 (setq ac-auto-show-menu 0.8)
@@ -14,3 +15,7 @@
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
+
+(add-to-list 'ac-modes 'haml-mode)
+(add-to-list 'ac-modes 'text-mode)
+(add-to-list 'ac-modes 'fundamental-mode)

@@ -4,6 +4,7 @@
 (show-paren-mode 1)
 ; smartparen
 (require 'smartparens-config)
+(smartparens-mode t)
 
 ;; no auto save file
 (setq auto-save-default nil)
@@ -16,7 +17,7 @@
 
 ;; 最近ひらいたファイル
 (recentf-mode 1)
-(global-set-key (kbd "M-f") 'recentf-open-files)
+(global-set-key (kbd "C-M-f") 'recentf-open-files)
 
 ;; languages, encodings
 (set-language-environment "Japanese")
