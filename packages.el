@@ -38,6 +38,7 @@
     edit-server
     feature-mode
     smart-compile
+    ctags
     ctags-update
     haskell-mode
     ac-haskell-process
