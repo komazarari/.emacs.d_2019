@@ -6,5 +6,7 @@
 (define-key region-bindings-mode-map "n" 'mc/mark-next-lines)
 (define-key region-bindings-mode-map "P" 'mc/mark-previous-like-this)
 (define-key region-bindings-mode-map "N" 'mc/mark-next-like-this)
+(define-key region-bindings-mode-map "s" 'mc/skip-to-next-like-this)
+(define-key region-bindings-mode-map "S" 'mc/skip-to-previous-like-this)
 (define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
 (define-key region-bindings-mode-map "q" 'query-replace-regexp)

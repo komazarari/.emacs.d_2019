@@ -4,7 +4,7 @@
 (show-paren-mode 1)
 ; smartparen
 (require 'smartparens-config)
-(smartparens-mode t)
+(smartparens-global-mode t)
 
 ;; no auto save file
 (setq auto-save-default nil)
@@ -17,7 +17,7 @@
 
 ;; 最近ひらいたファイル
 (recentf-mode 1)
-(global-set-key (kbd "C-M-f") 'recentf-open-files)
+(global-set-key (kbd "C-c f") 'recentf-open-files)
 
 ;; languages, encodings
 (set-language-environment "Japanese")
@@ -39,6 +39,10 @@
 
 ;; リージョンの色反転なし
 ;(setq transient-mark-mode nil)
+
+;; 矩形選択
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
 
 ;; スクラッチメッセージ
 (setq initial-scratch-message "")
@@ -64,3 +68,6 @@
      )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
+
+;; 音無効化
+(setq ring-bell-function 'ignore)

@@ -3,7 +3,7 @@
 
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
-(add-to-list 'load-path user-emacs-directory)
+; (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "./themes"))
 
 ;;; load initial files
@@ -29,3 +29,4 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'dired-find-alternate-file 'disabled nil)
+(put 'downcase-region 'disabled nil)
