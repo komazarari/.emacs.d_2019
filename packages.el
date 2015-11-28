@@ -46,6 +46,7 @@
     smartparens
     multi-term
     web-mode
+    expand-region
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
