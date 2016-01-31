@@ -47,6 +47,8 @@
     multi-term
     web-mode
     expand-region
+    flycheck
+    js2-mode
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
