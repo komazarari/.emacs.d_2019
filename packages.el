@@ -49,6 +49,7 @@
     expand-region
     flycheck
     js2-mode
+    vagrant-tramp
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
