@@ -50,6 +50,8 @@
     flycheck
     js2-mode
     vagrant-tramp
+    google-translate
+    popwin
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))

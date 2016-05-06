@@ -11,6 +11,8 @@
              (setq ac-ignore-case nil)
              (make-local-variable 'ac-ignores)
              (add-to-list 'ac-ignores "end")
+             (setq flycheck-checker 'ruby-rubocop)
+             (flycheck-mode 1)
              )
           )
 
@@ -18,6 +20,7 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Berksfile" . ruby-mode))
 
 ;; ruby-electric.el
 (require 'ruby-electric)
