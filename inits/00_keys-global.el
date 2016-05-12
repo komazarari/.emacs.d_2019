@@ -10,6 +10,7 @@
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\C-z" 'scroll-down)
 (global-set-key "\C-\M-y" 'insert-register)
+(global-set-key "\C-\M-k" 'kill-buffer)
 
 ;; 分割時に C-x p で逆戻り
 (define-key ctl-x-map "p"
