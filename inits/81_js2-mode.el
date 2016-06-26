@@ -1,6 +1,13 @@
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 (flycheck-add-mode 'javascript-eslint 'js2-jsx-mode)
-(setq js-indent-level 2)
+(flycheck-add-mode 'javascript-eslint 'javascript-mode)
+(setq js2-basic-offset 2)
+
+(eval-after-load 'flycheck
+  '(custom-set-variables
+    '(flycheck-disabled-checkers '(javascript-jshint javascript-jscs))
+    ))
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers

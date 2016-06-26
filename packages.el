@@ -52,6 +52,7 @@
     vagrant-tramp
     google-translate
     popwin
+    dockerfile-mode
     ))
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))
