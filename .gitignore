@@ -1,0 +1,9 @@
+*~
+*.dat
+auto-save-list
+elisp/elpa/*
+elisp/el-get/*
+.backup
+tramp
+server
+.mc-lists.el
