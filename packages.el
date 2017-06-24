@@ -12,6 +12,9 @@
 (defvar my-packages
   '(
     init-loader
+    ace-jump-mode
+    ; themes
+    color-theme-modern
     ))
 
 (dolist (p my-packages)
