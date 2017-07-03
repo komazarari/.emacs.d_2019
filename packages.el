@@ -13,7 +13,16 @@
   '(
     init-loader
     ace-jump-mode
-    ; themes
+    recentf-ext
+    visual-regexp
+    visual-regexp-steroids
+    pcre2el
+    migemo
+    helm
+    helm-swoop
+    ace-isearch
+    sequential-command ;; M-u,M-l,M-c を使いやすく
+    ;; themes
     color-theme-modern
     ))
 

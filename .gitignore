@@ -5,6 +5,11 @@ elisp/elpa/*
 elisp/el-get/*
 .backup
 tramp
-history
 server
 .mc-lists.el
+recentf
+ido.last
+kkcrc
+eshell/*
+history
+

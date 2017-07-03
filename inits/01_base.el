@@ -56,7 +56,7 @@
 (set-buffer-file-coding-system 'utf-8-unix)
 (set-terminal-coding-system 'utf-8-unix)
 (set-keyboard-coding-system 'utf-8-unix)
-(set-clipboard-coding-system 'utf-8-unix)
+;(set-clipboard-coding-system 'utf-8-unix)
 (prefer-coding-system 'utf-8-unix)
 ;(set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8-unix)
@@ -88,3 +88,41 @@
 
 ;; 警告音鳴らさない
 (setq ring-bell-function 'ignore)
+
+;; dired中に e で WritableDired
+(require 'wdired)
+(setq wdired-allow-to-change-permissions t)
+(define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)
+
+; ffap 見直す
+;(ffap-bindings)
+
+;; no auto save file
+(setq auto-save-default nil)
+
+;; ;; 矩形選択
+;; (cua-mode t)
+;; (setq cua-enable-cua-keys nil)
+;; C-x SPC で標準でできるのでそちらを使おう
+
+;; ido (見直す)
+(ido-mode 1)
+(ido-everywhere 1)
+
+;; recentf-ext 最近の500fileを保存
+(setq recentf-max-saved-items 500)
+(setq recentf-exclude
+      '("/TAGS$" "/var/tmp/"))
+(require 'recentf-ext)
+
+;; visual-regexp
+(require 'visual-regexp)
+(require 'visual-regexp-steroids)
+;(setq vr/engine 'pcre2el)
+(global-set-key (kbd "M-%") 'vr/query-replace)
+
+;; sequential-COMMAND
+;; 単語入力してから M-u, M-c とかできる
+;; C-a C-a でファイル先頭にいける
+(require 'sequential-command-config)
+(sequential-command-setup-keys)

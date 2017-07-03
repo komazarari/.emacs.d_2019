@@ -1,4 +1,6 @@
 ;;; シェルに合わせるため、C-hは後退に割り当てる
+(keyboard-translate ?\C-h ?\C-?)
+(global-set-key "\C-h" nil)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
 (global-set-key "\C-z" 'scroll-down)
