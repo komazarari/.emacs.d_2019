@@ -16,8 +16,17 @@
             backup-directory-alist))
 
 ;; 最近ひらいたファイル
-(recentf-mode 1)
-(global-set-key (kbd "C-c f") 'recentf-open-files)
+; (recentf-mode 1)
+; (global-set-key (kbd "C-c f") 'recentf-open-files)
+(require 'recentf-ext)
+(when (require 'recentf-ext nil t)
+  (setq recentf-max-saved-items 2000)
+  (setq recentf-exclude '(".recentf"))
+  (setq recentf-auto-cleanup 10)
+  (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
+  (recentf-mode 1))
+;(global-set-key (kbd "C-c f") 'recentf-open-files)
+(global-set-key (kbd "C-c C-f") 'recentf-open-files)
 
 ;; languages, encodings
 (set-language-environment "Japanese")

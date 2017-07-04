@@ -14,6 +14,7 @@
   '(
     init-loader
     exec-path-from-shell
+    recentf-ext
     cl-lib
     haml-mode
     ruby-mode
