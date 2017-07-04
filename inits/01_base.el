@@ -31,6 +31,12 @@
 ;;; 現在行に色をつける
 ;(global-hl-line-mode 1)
 
+;; 自動で対応するカッコ入力する
+(electric-pair-mode t)
+
+;; 対応カッコ強調
+(show-paren-mode 1)
+
  ;;; ミニバッファ履歴を次回Emacs起動時にも保存する
 (savehist-mode 1)
 
@@ -60,6 +66,9 @@
 (prefer-coding-system 'utf-8-unix)
 ;(set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8-unix)
+
+;; shell から PATH 引き継ぎ
+(exec-path-from-shell-initialize)
 
 ;; ace-jump
 (require 'ace-jump-mode)
@@ -127,3 +136,70 @@
 ;; C-a C-a でファイル先頭にいける
 (require 'sequential-command-config)
 (sequential-command-setup-keys)
+
+
+;; 標準 misc 系
+(require 'misc)
+;; 次の文字までを削除
+;;(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "M-z") 'zop-up-to-char)
+
+;; M-f の挙動を変更、次の単語の先頭にする
+(global-set-key (kbd "M-f") 'forward-to-word)
+;(global-set-key (kbd "M-b") 'backward-to-word)
+
+;; ウィンドウレイアウトをもどしたり
+(winner-mode 1)
+(global-set-key (kbd "C-x C-g") 'winner-undo)
+(global-set-key (kbd "C-x C-M-g") 'winner-redo)
+
+;; undo / redo カイゼン C-/ で undo, C-M-/ で redo 
+(require 'redo+)
+(global-set-key (kbd "C-M-/") 'redo)
+
+;; ediff
+;; コントロールバッファを同一フレームに
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+;; 左右に分割
+(setq ediff-split-window-function 'split-window-horizontally)
+
+
+;; auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/elpa/dict")
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+(define-key ac-mode-map (kbd "<C-tab>") 'auto-complete)
+(setq ac-auto-start 3)
+(setq ac-use-fuzzy t)
+(add-to-list 'ac-user-dictionary-files "~/.emacs.d/ac-dict")
+(setq ac-auto-show-menu 0.5)
+;; 補完メニュー表示時のみ C-n C-p を有効にする
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
+(add-to-list 'ac-modes 'haml-mode)
+(add-to-list 'ac-modes 'text-mode)
+(add-to-list 'ac-modes 'fundamental-mode)
+
+
+;; 現在位置からいい感じに region 選択
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-M-=") 'er/contract-region)
+
+;; カーソル分身周り
+(require 'multiple-cursors)
+(multiple-cursors-mode)
+(require 'region-bindings-mode)
+(region-bindings-mode-enable)
+(define-key region-bindings-mode-map "a" 'mc/mark-all-like-this)
+(define-key region-bindings-mode-map "p" 'mc/mark-previous-lines)
+(define-key region-bindings-mode-map "n" 'mc/mark-next-lines)
+(define-key region-bindings-mode-map "P" 'mc/mark-previous-like-this)
+(define-key region-bindings-mode-map "N" 'mc/mark-next-like-this)
+(define-key region-bindings-mode-map "s" 'mc/skip-to-next-like-this)
+(define-key region-bindings-mode-map "S" 'mc/skip-to-previous-like-this)
+(define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
+(define-key region-bindings-mode-map "q" 'query-replace-regexp)

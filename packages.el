@@ -17,17 +17,28 @@
     recentf-ext
     visual-regexp
     visual-regexp-steroids
+    exec-path-from-shell
     pcre2el
     migemo
     helm
+    helm-migemo
     helm-swoop
     helm-cmd-t
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく
+    zop-to-char
+    redo+
+    edit-server
+    auto-complete
+    expand-region
+    multiple-cursors
+    region-bindings-mode
     ;; themes
     color-theme-modern
     ;; text
     open-junk-file
+    clipmon
+    google-translate
     ))
 
 (dolist (p my-packages)

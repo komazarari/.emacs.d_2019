@@ -58,5 +58,6 @@
        ;; C-u C-u C-sでmigemoなしのhelm-swoop
        (16 'helm-swoop-nomigemo)))))
 (global-set-key (kbd "C-s") 'isearch-forward-or-helm-swoop-or-helm-occur)
+;; isearch 中に C-o で occur(or swoop) に移行
+(define-key isearch-mode-map (kbd "C-o") (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 ;; ここまで
-
