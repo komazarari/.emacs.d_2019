@@ -33,7 +33,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (sequential-command ace-isearch helm-swoop migemo pcre2el visual-regexp-steroids ace-jump-mode init-loader))))
+    (helm-cmd-t sequential-command ace-isearch helm-swoop migemo pcre2el visual-regexp-steroids ace-jump-mode init-loader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

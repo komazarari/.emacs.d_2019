@@ -11,6 +11,7 @@
 
 (defvar my-packages
   '(
+    ;; base
     init-loader
     ace-jump-mode
     recentf-ext
@@ -20,10 +21,13 @@
     migemo
     helm
     helm-swoop
+    helm-cmd-t
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく
     ;; themes
     color-theme-modern
+    ;; text
+    open-junk-file
     ))
 
 (dolist (p my-packages)

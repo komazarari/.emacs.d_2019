@@ -8,12 +8,26 @@
   "Emulate `kill-line' in helm minibuffer"
   (kill-new (buffer-substring (point) (field-end))))
 
+(require 'helm-C-x-b)
 ;(global-set-key (kbd "C-@") 'helm-M-x)
 (global-set-key (kbd "M-[") 'helm-M-x)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-;") 'helm-mini)
+;(global-set-key (kbd "C-;") 'helm-mini)
+(global-set-key (kbd "C-;") 'helm-for-files)
+(global-set-key (kbd "C-:") 'helm-C-x-b) ;
 ;(global-set-key (kbd "C-:") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+(setq helm-for-files-preferred-list
+      '(helm-source-buffers-list
+        helm-source-recentf
+        helm-source-bookmarks
+        helm-source-file-cache
+        helm-source-files-in-current-dir
+        ;; 必要とあれば
+        ;helm-source-bookmark-set
+        ;helm-source-locate)
+        ))
 
 
 ;; ace-isearch (isearch + ace-jump
@@ -45,3 +59,4 @@
        (16 'helm-swoop-nomigemo)))))
 (global-set-key (kbd "C-s") 'isearch-forward-or-helm-swoop-or-helm-occur)
 ;; ここまで
+
