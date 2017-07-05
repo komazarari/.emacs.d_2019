@@ -23,6 +23,7 @@
     helm
     helm-migemo
     helm-swoop
+    helm-ag
     helm-cmd-t
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく

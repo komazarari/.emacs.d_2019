@@ -61,3 +61,26 @@
 ;; isearch 中に C-o で occur(or swoop) に移行
 (define-key isearch-mode-map (kbd "C-o") (if (< 1000000 (buffer-size)) 'helm-occur 'helm-swoop))
 ;; ここまで
+
+;; from http://emacs.rubikitch.com/helm-ag/
+;;; ag以外の検索コマンドも使える
+;; (setq helm-ag-base-command "grep -rin")
+;; (setq helm-ag-base-command "csearch -n")
+;; (setq helm-ag-base-command "pt --nocolor --nogroup")
+;; (setq helm-ag-base-command "rg --vimgrep --no-heading")
+;;; 現在のシンボルをデフォルトのクエリにする
+(setq helm-ag-insert-at-point 'symbol)
+;;; C-M-gはちょうどあいてる
+(global-set-key (kbd "C-M-g") 'helm-ag)
+(global-set-key (kbd "C-M-k") 'backward-kill-sexp) ;推奨
+
+(defun helm-ag-dot-emacs ()
+  ".emacs.d以下を検索"
+  (interactive)
+  (helm-ag "~/.emacs.d/"))
+(require 'projectile nil t)
+(defun helm-projectile-ag ()
+  "Projectileと連携"
+  (interactive)
+  (helm-ag (projectile-project-root)))
+;; (helm-ag "~/.emacs.d/")

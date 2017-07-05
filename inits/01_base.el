@@ -67,8 +67,11 @@
 ;(set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8-unix)
 
-;; shell から PATH 引き継ぎ
-(exec-path-from-shell-initialize)
+;; windows 以外は shell から PATH 引き継ぎ
+;; windows はめんどくさいので windows-init.el に...
+(when (not (equal system-type 'windows-nt))
+  (exec-path-from-shell-initialize)
+  )
 
 ;; ace-jump
 (require 'ace-jump-mode)
@@ -150,8 +153,8 @@
 
 ;; ウィンドウレイアウトをもどしたり
 (winner-mode 1)
-(global-set-key (kbd "C-x C-g") 'winner-undo)
-(global-set-key (kbd "C-x C-M-g") 'winner-redo)
+(global-set-key (kbd "C-\\") 'winner-undo)
+(global-set-key (kbd "M-\\") 'winner-redo)
 
 ;; undo / redo カイゼン C-/ で undo, C-M-/ で redo 
 (require 'redo+)
