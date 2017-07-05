@@ -7,8 +7,9 @@
 (global-set-key "\C-\M-y" 'insert-register)
 (global-set-key "\C-\M-k" 'kill-buffer)
 
-;; C-t はウィンドウ切り替えにする
-(global-set-key (kbd "C-t") 'other-window)
+;; C-, ウィンドウ切り替え
+(global-set-key (kbd "C-,") 'other-window)
+;;  => 95_additional にも np 同時押し
 
 ;; インデント
 (global-set-key "\C-c\C-q" 'indent-region)

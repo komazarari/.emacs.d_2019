@@ -31,15 +31,21 @@
     redo+
     edit-server
     auto-complete
+    fuzzy
     expand-region
     multiple-cursors
     region-bindings-mode
+    key-chord
+    vagrant-tramp
+    smartrep
     ;; themes
     color-theme-modern
     ;; text
     open-junk-file
     clipmon
     google-translate
+    ;; cording
+    comment-dwim-2
     ))
 
 (dolist (p my-packages)

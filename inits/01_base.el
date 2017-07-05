@@ -154,7 +154,6 @@
 ;; ウィンドウレイアウトをもどしたり
 (winner-mode 1)
 (global-set-key (kbd "C-\\") 'winner-undo)
-(global-set-key (kbd "M-\\") 'winner-redo)
 
 ;; undo / redo カイゼン C-/ で undo, C-M-/ で redo 
 (require 'redo+)
@@ -206,3 +205,26 @@
 (define-key region-bindings-mode-map "S" 'mc/skip-to-previous-like-this)
 (define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
 (define-key region-bindings-mode-map "q" 'query-replace-regexp)
+
+;; org-mode の移動
+(require 'smartrep)
+(require 'org)
+(smartrep-define-key org-mode-map "C-c"
+  '(("C-n" . org-next-visible-heading)
+    ("C-p" . org-previous-visible-heading)
+    ("C-u" . outline-up-heading)
+    ("C-f" . org-forward-heading-same-level)
+    ("C-b" . org-backward-heading-same-level)))
+
+;; windows のりサイズ
+(smartrep-define-key global-map "C-x"
+  '(("o" . other-window)
+    ("0" . delete-window)
+    ("1" . delete-other-windows)
+    ("2" . split-window-below)
+    ("3" . split-window-right)
+    ("{" . shrink-window-horizontally)
+    ("}" . enlarge-window-horizontally)
+    ("+" . balance-windows)
+    ("^" . enlarge-window)
+    ("-" . shrink-window)))
