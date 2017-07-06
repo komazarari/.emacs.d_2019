@@ -6,5 +6,8 @@
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
-             (setq flycheck-checker 'ruby-rubocop)
-             (flycheck-mode 1)))
+             (flycheck-select-checker 'ruby-rubocop)
+             (flycheck-mode 1)
+             (ruby-electric-mode t)
+             )
+          )

@@ -31,6 +31,9 @@
 ;;; 現在行に色をつける
 ;(global-hl-line-mode 1)
 
+;;; リージョンを削除できるように
+(delete-selection-mode t)
+
 ;; 自動で対応するカッコ入力する
 (electric-pair-mode t)
 

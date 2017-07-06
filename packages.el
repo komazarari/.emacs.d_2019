@@ -39,6 +39,8 @@
     key-chord
     vagrant-tramp
     smartrep
+    ;; format
+    yaml-mode
     ;; themes
     color-theme-modern
     ;; text
@@ -49,6 +51,7 @@
     comment-dwim-2
     flycheck
     rspec-mode
+    ruby-electric
     ))
 
 (dolist (p my-packages)
