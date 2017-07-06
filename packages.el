@@ -13,6 +13,7 @@
   '(
     ;; base
     init-loader
+    use-package ;; だんだん使う
     ace-jump-mode
     recentf-ext
     visual-regexp
@@ -46,6 +47,8 @@
     google-translate
     ;; cording
     comment-dwim-2
+    flycheck
+    rspec-mode
     ))
 
 (dolist (p my-packages)
