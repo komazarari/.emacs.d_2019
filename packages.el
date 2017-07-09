@@ -37,8 +37,8 @@
     multiple-cursors
     region-bindings-mode
     key-chord
-    vagrant-tramp
     smartrep
+    state
     ;; format
     yaml-mode
     ;; themes
@@ -53,6 +53,23 @@
     rspec-mode
     ruby-electric
     ))
+
+(when (equal system-type 'darwin)
+  (setq my-packages
+        (append my-packages
+                '(
+                  vagrant-tramp
+                  ))))
+
+(when (equal system-type 'windows-nt)
+  (setq my-packages
+        (append my-packages
+                '(
+                  state
+                  mozc
+                  mozc-im
+                  mozc-popup
+                  ))))
 
 (dolist (p my-packages)
   (when (or (not (package-installed-p p)))

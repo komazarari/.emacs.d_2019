@@ -2,10 +2,10 @@
 (helm-mode t)
 (helm-migemo-mode 1)
 
-;; Emulate `kill-line' in helm minibuffer
+;; Emulate 'kill-line' in helm minibuffer
 (setq helm-delete-minibuffer-contents-from-point t)
 (defadvice helm-delete-minibuffer-contents (before helm-emulate-kill-line activate)
-  "Emulate `kill-line' in helm minibuffer"
+  "Emulate 'kill-line' in helm minibuffer"
   (kill-new (buffer-substring (point) (field-end))))
 
 (require 'helm-C-x-b)

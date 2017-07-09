@@ -12,6 +12,8 @@
 (require 'cl-lib)
 (require 'generic-x)
 
+(add-to-list 'load-path "~/.emacs.d/elisp/site-lisp")
+
 ;;; load config files
 (require 'init-loader)
 (setq init-loader-show-log-after-init nil) ; 起動時のログ非表示
