@@ -34,3 +34,5 @@
      (if asciip "ja" "en")
      string)))
 (global-set-key (kbd "C-c t") 'google-translate-enja-or-jaen)
+
+(setq org-use-speed-commands t)

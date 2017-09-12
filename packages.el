@@ -39,6 +39,10 @@
     key-chord
     smartrep
     state
+    magit
+    shrink-whitespace
+    yasnippet
+    helm-c-yasnippet
     ;; format
     yaml-mode
     ;; themes

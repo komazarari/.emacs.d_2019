@@ -115,6 +115,12 @@
 ;; no auto save file
 (setq auto-save-default nil)
 
+;; Backup file
+(setq make-backup-files t)
+(setq backup-directory-alist
+      (cons (cons "\\.*$" (expand-file-name "~/.emacs.d/.backup"))
+            backup-directory-alist))
+
 ;; ;; 矩形選択
 ;; (cua-mode t)
 ;; (setq cua-enable-cua-keys nil)
@@ -168,6 +174,8 @@
 ;; 左右に分割
 (setq ediff-split-window-function 'split-window-horizontally)
 
+;; M-\ 二回で スペース調整
+(global-set-key (kbd "M-\\") 'shrink-whitespace)
 
 ;; auto-complete
 (require 'auto-complete-config)
@@ -269,3 +277,11 @@
 ))
 (setq whitespace-action '(auto-cleanup))
 (global-whitespace-mode 1)
+
+;; yasnippet
+(require 'yasnippet)
+(require 'helm-c-yasnippet)
+(setq helm-yas-space-match-any-greedy t)
+(global-set-key (kbd "C-c y") 'helm-yas-complete)
+(push '("emacs.+/snippets/" . snippet-mode) auto-mode-alist)
+(yas-global-mode 1)
