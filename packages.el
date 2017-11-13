@@ -43,6 +43,7 @@
     shrink-whitespace
     yasnippet
     helm-c-yasnippet
+    wgrep
     ;; format
     yaml-mode
     ;; themes
@@ -56,6 +57,7 @@
     flycheck
     rspec-mode
     ruby-electric
+    electric-operator
     ))
 
 (when (equal system-type 'darwin)

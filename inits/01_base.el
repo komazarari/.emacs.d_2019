@@ -60,6 +60,9 @@
 (tool-bar-mode -1)
 ;(scroll-bar-mode -1)
 
+;; 位置を出すようにする
+(column-number-mode 1)
+
 ;; 基本的に utf-8 にする
 (setq default-buffer-file-coding-system 'utf-8-unix)
 (set-buffer-file-coding-system 'utf-8-unix)
@@ -285,3 +288,12 @@
 (global-set-key (kbd "C-c y") 'helm-yas-complete)
 (push '("emacs.+/snippets/" . snippet-mode) auto-mode-alist)
 (yas-global-mode 1)
+
+
+(require 'wgrep nil t)
+;; ;; (setf wgrep-enable-key "e")
+;; (setq wgrep-enable-key "p")
+;; ;;; wgrep終了時にバッファを保存
+;; (setq wgrep-auto-save-buffer t)
+;; ;;; read-only bufferにも変更を適用する
+;; (setq wgrep-change-readonly-file t)
