@@ -245,7 +245,8 @@
 
 ;; 空白とかを可視化
 (require 'whitespace)
-(setq whitespace-style '(face           ; faceで可視化
+(setq whitespace-style '(
+                         face           ; faceで可視化
                          trailing       ; 末尾
                          tabs           ; タブ
                          space
@@ -278,6 +279,21 @@
         ;; If this is a problem for you, please, comment the line below.
         (tab-mark     ?\t    [?\u00BB ?\t] [?\\ ?\t]) ; tab - left quote mark
 ))
+(defvar my/bg-color "#232323")
+(set-face-attribute 'whitespace-trailing nil
+                    :background my/bg-color
+                    :foreground "DeepPink"
+                    :underline t)
+(set-face-attribute 'whitespace-tab nil
+                    :background my/bg-color
+                    :foreground "LightSkyBlue"
+                    :underline t)
+(set-face-attribute 'whitespace-space nil
+                    :background my/bg-color
+                    :foreground "GreenYellow"
+                    :weight 'bold)
+(set-face-attribute 'whitespace-empty nil
+                    :background my/bg-color)
 (setq whitespace-action '(auto-cleanup))
 (global-whitespace-mode 1)
 
