@@ -44,6 +44,9 @@
     yasnippet
     helm-c-yasnippet
     wgrep
+    mozc
+    mozc-im
+    mozc-popup
     ;; format
     yaml-mode
     ;; themes
@@ -72,9 +75,6 @@
         (append my-packages
                 '(
                   state
-                  mozc
-                  mozc-im
-                  mozc-popup
                   ))))
 
 (dolist (p my-packages)

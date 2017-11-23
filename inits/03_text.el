@@ -1,7 +1,15 @@
 ;; open-junk-file
 (require 'open-junk-file)
-(setq open-junk-file-format "~/junk/%Y-%m-%d.")
+;; (setq open-junk-file-format "~/junk/%Y-%m-%d.")
 (global-set-key "\C-xj" 'open-junk-file)
+
+(cond ((file-directory-p "~/OneDrive/memos")
+       (setq open-junk-file-format "~/OneDrive/memos/%Y-%m."))
+      ((file-directory-p "~/win/OneDrive/memos")
+       (setq open-junk-file-format "~/win/OneDrive/memos/%Y-%m."))
+      (t
+       (setq open-junk-file-format "~/junk/%Y-%m."))
+      )
 
 ;; google 翻訳
 ;; from http://emacs.rubikitch.com/google-translate/
