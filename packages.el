@@ -49,13 +49,16 @@
     mozc-popup
     ;; format
     yaml-mode
+    groovy-mode
     ;; themes
     color-theme-modern
     ;; text
+    markdown-mode
     open-junk-file
     clipmon
     google-translate
     ;; cording
+    helm-ghq
     comment-dwim-2
     flycheck
     rspec-mode

@@ -85,5 +85,6 @@
   ;; 試しに mozc-temp
   (global-set-key (kbd "M-n") #'mozc-temp-convert)
   (global-set-key (kbd "C-S-SPC") #'mozc-temp-convert-dwim)
+  (global-set-key (kbd "C-\"") #'mozc-temp-convert-dwim)
   (setq mozc-temp-remove-pre-space nil)
   )

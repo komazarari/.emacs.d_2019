@@ -18,12 +18,16 @@
 ;(global-set-key (kbd "C-:") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
+(require 'helm-ghq)
+(add-to-list 'exec-path "~/dev/bin")
+
 (setq helm-for-files-preferred-list
       '(helm-source-buffers-list
         helm-source-recentf
-        helm-source-bookmarks
-        helm-source-file-cache
+        helm-source-ghq
         helm-source-files-in-current-dir
+        helm-source-file-cache
+        helm-source-bookmarks
         ;; 必要とあれば
         ;helm-source-bookmark-set
         ;helm-source-locate)
@@ -69,6 +73,8 @@
 ;; (setq helm-ag-base-command "pt --nocolor --nogroup")
 ;; (setq helm-ag-base-command "rg --vimgrep --no-heading")
 ;;; 現在のシンボルをデフォルトのクエリにする
+(require 'helm-files)
+(require 'helm-ag)
 (setq helm-ag-insert-at-point 'symbol)
 ;;; C-M-gはちょうどあいてる
 (global-set-key (kbd "C-M-g") 'helm-ag)
