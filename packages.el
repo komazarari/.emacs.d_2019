@@ -26,6 +26,7 @@
     helm-swoop
     helm-ag
     helm-cmd-t
+    mykie
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく
     zop-to-char
@@ -47,9 +48,12 @@
     mozc
     mozc-im
     mozc-popup
+    mozc-temp
+    ripgrep
     ;; format
     yaml-mode
     groovy-mode
+    dockerfile-mode
     ;; themes
     color-theme-modern
     ;; text

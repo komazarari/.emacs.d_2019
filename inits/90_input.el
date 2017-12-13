@@ -12,13 +12,15 @@
   (blink-cursor-mode 0)
 
   ;; C-' で IME をトグルする
-  (global-set-key (kbd "C-'") 'toggle-input-method)
+;  (global-set-key (kbd "C-'") 'toggle-input-method)
+  (global-set-key (kbd "C-'") 'mozc-temp-convert-dwim)
   (define-key isearch-mode-map (kbd "C-'") 'isearch-toggle-input-method)
   (define-minor-mode overriding-minor-mode
     "強制的にC-'を割り当てる"             ;説明文字列
     t                                     ;デフォルトで有効にする
     ""                                    ;モードラインに表示しない
-    `((,(kbd "C-'") . toggle-input-method)))
+;    `((,(kbd "C-'") . toggle-input-method)))
+    `((,(kbd "C-'") . mozc-temp-convert-dwim)))
   ;; mozc-cursor-color を利用するための対策
   (make-variable-buffer-local 'mozc-im-mode)
   (add-hook 'mozc-im-activate-hook (lambda () (setq mozc-im-mode t)))

@@ -25,6 +25,7 @@
       '(helm-source-buffers-list
         helm-source-recentf
         helm-source-ghq
+        helm-source-cmd-t-caches
         helm-source-files-in-current-dir
         helm-source-file-cache
         helm-source-bookmarks
@@ -71,13 +72,19 @@
 ;; (setq helm-ag-base-command "grep -rin")
 ;; (setq helm-ag-base-command "csearch -n")
 ;; (setq helm-ag-base-command "pt --nocolor --nogroup")
-;; (setq helm-ag-base-command "rg --vimgrep --no-heading")
+(setq helm-ag-base-command "rg --vimgrep --no-heading")
 ;;; 現在のシンボルをデフォルトのクエリにする
 (require 'helm-files)
 (require 'helm-ag)
 (setq helm-ag-insert-at-point 'symbol)
+
 ;;; C-M-gはちょうどあいてる
-(global-set-key (kbd "C-M-g") 'helm-ag)
+;;; C-M-g で helm-ag (grep), C-u C-M-g で helm-cmd-t-grep (git grep)
+(mykie:global-set-key "C-M-g"
+  :default    helm-ag
+  :C-u!       helm-cmd-t-grep
+  )
+;; (global-set-key (kbd "C-M-g") 'helm-ag)
 (global-set-key (kbd "C-M-k") 'backward-kill-sexp) ;推奨
 
 (defun helm-ag-dot-emacs ()
