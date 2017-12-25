@@ -13,3 +13,6 @@
           )
 
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+
+(add-hook 'javascript-mode-hook
+          (setq js-indent-level 2))
