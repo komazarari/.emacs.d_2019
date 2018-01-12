@@ -89,4 +89,9 @@
   (global-set-key (kbd "C-S-SPC") #'mozc-temp-convert-dwim)
   (global-set-key (kbd "C-\"") #'mozc-temp-convert-dwim)
   (setq mozc-temp-remove-pre-space nil)
+
+  ;; ac-mozc も使ってみる
+  (require 'ac-mozc)
+  (define-key ac-mode-map (kbd "C-c C-SPC") 'ac-complete-mozc)
+
   )

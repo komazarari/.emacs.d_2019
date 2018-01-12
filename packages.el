@@ -49,6 +49,7 @@
     mozc-im
     mozc-popup
     mozc-temp
+    ac-mozc
     ripgrep
     ;; format
     yaml-mode

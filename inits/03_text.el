@@ -44,3 +44,9 @@
 (global-set-key (kbd "C-c t") 'google-translate-enja-or-jaen)
 
 (setq org-use-speed-commands t)
+(defun my-ac-mozc-setup ()
+  (setq ac-sources
+        '(ac-source-mozc ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+  (setq ac-mozc-remove-space nil)
+  )
+(add-hook 'org-mode-hook 'my-ac-mozc-setup)
