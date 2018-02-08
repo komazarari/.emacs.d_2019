@@ -84,7 +84,7 @@
 (setq ace-jump-mode-gray-background nil)
 (setq ace-jump-word-mode-use-query-char nil)
 (setq ace-jump-mode-move-keys
-      (append "asdfghjkl;:]qwertyuiop@zxcvbnm,." nil))
+      (append "asdfghjkl;[]qwertyuiopzxcvbnm,." nil))
 (global-set-key (kbd "C-o") 'ace-jump-word-mode)
 
 ;; 補完
@@ -131,7 +131,7 @@
 
 ;; ido (見直す)
 (ido-mode 1)
-(ido-everywhere 1)
+;; (ido-everywhere 1)
 
 ;; recentf-ext 最近の500fileを保存
 (setq recentf-max-saved-items 500)

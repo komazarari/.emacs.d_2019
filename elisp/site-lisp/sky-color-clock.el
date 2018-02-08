@@ -1,0 +1,1 @@
+./sky-color-clock/sky-color-clock.el

@@ -25,3 +25,6 @@
 (key-chord-define-global "np" 'other-window)
 (key-chord-define emacs-lisp-mode-map "df" 'describe-function)
 (key-chord-define-global "vv" 'find-alternate-file)
+
+;; 検索 M-s M-w (eww-search-words) で google 使う
+(setq eww-search-prefix "https://www.google.co.jp/search?btnI&q=")

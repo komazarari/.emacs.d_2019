@@ -48,5 +48,6 @@
   (setq ac-sources
         '(ac-source-mozc ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
   (setq ac-mozc-remove-space nil)
+  (setq ac-auto-start 2)
   )
 (add-hook 'org-mode-hook 'my-ac-mozc-setup)
