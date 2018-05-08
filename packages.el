@@ -69,6 +69,10 @@
     rspec-mode
     ruby-electric
     electric-operator
+    go-mode
+    go-autocomplete
+    go-eldoc
+    ;; go-dlv
     ))
 
 (when (equal system-type 'darwin)

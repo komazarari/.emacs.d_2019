@@ -51,3 +51,4 @@
   (setq ac-auto-start 2)
   )
 (add-hook 'org-mode-hook 'my-ac-mozc-setup)
+(add-hook 'text-mode-hook 'my-ac-mozc-setup)
