@@ -72,6 +72,7 @@
     go-mode
     go-autocomplete
     go-eldoc
+    rjsx-mode
     ;; go-dlv
     ))
 

@@ -14,9 +14,15 @@
 
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
+;; JS
 (add-hook 'javascript-mode-hook
           (setq js-indent-level 2))
+;; (add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))) ; 全部で rjsx-mode にする場合はこっち
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("containers\\/.*\\.js\\'" . rjsx-mode))
 
+
+;; Golang
 (require 'go-autocomplete)
 ;; (require 'go-dlv)
 (add-hook 'go-mode-hook 'flycheck-mode)
