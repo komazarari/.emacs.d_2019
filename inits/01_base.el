@@ -84,8 +84,12 @@
 (setq ace-jump-mode-gray-background nil)
 (setq ace-jump-word-mode-use-query-char nil)
 (setq ace-jump-mode-move-keys
-      (append "asdfghjkl;[]qwertyuiopzxcvbnm,." nil))
-(global-set-key (kbd "C-o") 'ace-jump-word-mode)
+      (append "asdfghjkl;wertyuio" nil))
+;; (global-set-key (kbd "C-o") 'ace-jump-word-mode)
+(mykie:global-set-key "C-o"
+  :default    ace-jump-word-mode
+  :C-u!       ace-jump-line-mode
+  )
 
 ;; 補完
 (global-set-key (kbd "M-/") 'hippie-expand)
