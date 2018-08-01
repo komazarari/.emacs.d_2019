@@ -235,7 +235,7 @@
     ("C-f" . org-forward-heading-same-level)
     ("C-b" . org-backward-heading-same-level)))
 
-;; windows のりサイズ
+;; window のリサイズ
 (smartrep-define-key global-map "C-x"
   '(("o" . other-window)
     ("0" . delete-window)
@@ -247,6 +247,9 @@
     ("+" . balance-windows)
     ("^" . enlarge-window)
     ("-" . shrink-window)))
+
+;; タイトルバーにフルパス
+(setq frame-title-format "%f")
 
 ;; 空白とかを可視化
 (require 'whitespace)

@@ -73,6 +73,7 @@
     go-autocomplete
     go-eldoc
     rjsx-mode
+    json-mode
     ;; go-dlv
     ))
 

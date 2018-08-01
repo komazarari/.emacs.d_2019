@@ -1,7 +1,10 @@
 ;;; シェルに合わせるため、C-hは後退に割り当てる
-(keyboard-translate ?\C-h ?\C-?)
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
+(define-key key-translation-map (kbd "C-?") (kbd "C-h"))
+;; (keyboard-translate ?\C-? ?\C-h)
+;; (keyboard-translate ?\C-h ?\C-?)
 ;; (global-set-key "\C-h" nil)
-(global-set-key (kbd "C-h") 'delete-backward-char)
+;; (global-set-key (kbd "C-h") 'delete-backward-char)
 
 (global-set-key "\C-z" 'scroll-down)
 (global-set-key "\C-\M-y" 'insert-register)

@@ -33,9 +33,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("713f898dd8c881c139b62cf05b7ac476d05735825d49006255c0a31f9a4f46ab" default)))
  '(package-selected-packages
    (quote
-    (go-mode groovy-mode org-pomodoro alert mozc-temp mozc mozc-im mozc-popup wgrep dockerfile-mode php-mode markdown-mode fuzzy smartrep comment-dwim-2 vagrant-tramp key-chord key-combo google-translate clipmon edit-server redo+ zop-to-char helm-migemo helm-cmd-t sequential-command ace-isearch helm-swoop migemo pcre2el visual-regexp-steroids ace-jump-mode init-loader))))
+    (tangotango-theme json-mode go-mode groovy-mode org-pomodoro alert mozc-temp mozc mozc-im mozc-popup wgrep dockerfile-mode php-mode markdown-mode fuzzy smartrep comment-dwim-2 vagrant-tramp key-chord key-combo google-translate clipmon edit-server redo+ zop-to-char helm-migemo helm-cmd-t sequential-command ace-isearch helm-swoop migemo pcre2el visual-regexp-steroids ace-jump-mode init-loader))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
