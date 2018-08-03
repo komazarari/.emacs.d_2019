@@ -28,3 +28,6 @@
 
 ;; 検索 M-s M-w (eww-search-words) で google 使う
 (setq eww-search-prefix "https://www.google.co.jp/search?btnI&q=")
+
+;; 実行ファイルっぽいものに自動で +x して保存する
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)

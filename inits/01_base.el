@@ -165,7 +165,7 @@
 
 ;; M-f の挙動を変更、次の単語の先頭にする
 (global-set-key (kbd "M-f") 'forward-to-word)
-;(global-set-key (kbd "M-b") 'backward-to-word)
+(global-set-key (kbd "M-b") 'backward-to-word)
 
 ;; ウィンドウレイアウトをもどしたり
 (winner-mode 1)

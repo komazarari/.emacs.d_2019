@@ -4,6 +4,8 @@
   :ensure t
   :init (global-flycheck-mode))
 
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (add-hook 'ruby-mode-hook
           '(lambda ()
              (flycheck-select-checker 'ruby-rubocop)
@@ -13,6 +15,9 @@
           )
 
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+(add-hook 'groovy-mode-hook
+          (lambda ()
+            (c-set-offset 'label 2)))
 
 ;; JS
 (add-hook 'javascript-mode-hook

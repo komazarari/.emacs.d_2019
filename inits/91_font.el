@@ -1,13 +1,36 @@
-;; デフォルト フォント
-(set-face-attribute 'default nil :family "Noto Sans Mono CJK JP" :height 120)
-;; プロポーショナル フォント
-(set-face-attribute 'variable-pitch nil :family "Noto Sans Mono CJK JP" :height 120)
-;; 等幅フォント
-(set-face-attribute 'fixed-pitch nil :family "Noto Sans Mono CJK JP" :height 120)
-;; ツールチップ表示フォント
-(set-face-attribute 'tooltip nil :family "Noto Sans Mono CJK JP" :height 90)
+;; ;; デフォルト フォント
+;; (set-face-attribute 'default nil :family "Noto Sans Mono CJK JP" :height 120)
+;; ;; プロポーショナル フォント
+;; (set-face-attribute 'variable-pitch nil :family "Noto Sans Mono CJK JP" :height 120)
+;; ;; 等幅フォント
+;; (set-face-attribute 'fixed-pitch nil :family "Noto Sans Mono CJK JP" :height 120)
+;; ;; ツールチップ表示フォント
+;; (set-face-attribute 'tooltip nil :family "Noto Sans Mono CJK JP" :height 120)
 
-;; (when (window-system)
+
+;; ;; デフォルト フォント
+;; (set-face-attribute 'default nil :family "Source Han Code JP" :height 105 :weight 'semi-light)
+;; ;; プロポーショナル フォント
+;; (set-face-attribute 'variable-pitch nil :family "Source Han Code JP" :height 105)
+;; ;; 等幅フォント
+;; (set-face-attribute 'fixed-pitch nil :family "Source Han Code JP" :height 105)
+;; ;; ツールチップ表示フォント
+;; (set-face-attribute 'tooltip nil :family "Source Han Code JP" :height 105)
+
+;; デフォルト フォント
+;; (set-face-attribute 'default nil :family "Ricty" :height 130 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "Ricty" :height 130 :weight 'bold)
+;; プロポーショナル フォント
+(set-face-attribute 'variable-pitch nil :family "Ricty" :height 130 :weight 'bold)
+;; 等幅フォント
+(set-face-attribute 'fixed-pitch nil :family "Ricty" :height 130 :weight 'bold)
+;; ツールチップ表示フォント
+(set-face-attribute 'tooltip nil :family "Ricty" :height 90)
+
+;; (set-face-attribute 'default nil :family "Source Han Code JP" :height 120)
+;; (add-to-list 'face-font-rescale-alist '(".*Source Han Code.*" . 0.8))
+
+;; (90 (window-system)
 ;;   (set-default-font "Ricty Discord-15"))
 
 ; ASCII 文字のフォントをマップする

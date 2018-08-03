@@ -57,6 +57,7 @@
     dockerfile-mode
     ;; themes
     color-theme-modern
+    monokai-theme
     ;; text
     markdown-mode
     open-junk-file
@@ -74,6 +75,7 @@
     go-eldoc
     rjsx-mode
     json-mode
+    rainbow-delimiters
     ;; go-dlv
     ))
 
