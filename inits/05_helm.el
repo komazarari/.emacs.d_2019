@@ -1,3 +1,4 @@
+(require 'helm)
 (require 'helm-config)
 (helm-mode t)
 (helm-migemo-mode 1)

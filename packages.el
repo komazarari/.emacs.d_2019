@@ -14,6 +14,8 @@
     ;; base
     init-loader
     use-package ;; だんだん使う
+    package-utils
+    auto-async-byte-compile
     ace-jump-mode
     recentf-ext
     visual-regexp
@@ -30,7 +32,7 @@
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく
     zop-to-char
-    redo+
+    ;; redo+ ;; melpa になくなったので site-lisp に置く
     edit-server
     auto-complete
     fuzzy

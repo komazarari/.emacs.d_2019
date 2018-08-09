@@ -79,6 +79,9 @@
   (exec-path-from-shell-initialize)
   )
 
+;; mykie
+(require 'mykie)
+
 ;; ace-jump
 (require 'ace-jump-mode)
 (setq ace-jump-mode-gray-background nil)
