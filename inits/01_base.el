@@ -92,6 +92,7 @@
 (mykie:global-set-key "C-o"
   :default    ace-jump-word-mode
   :C-u!       ace-jump-line-mode
+  :C-u*2!     ace-jump-char-mode
   )
 
 ;; 補完
@@ -194,7 +195,7 @@
 (ac-set-trigger-key "TAB")
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 (define-key ac-mode-map (kbd "<C-tab>") 'auto-complete)
-(setq ac-auto-start 3)
+(setq ac-auto-start 4)
 (setq ac-use-fuzzy t)
 (add-to-list 'ac-user-dictionary-files "~/.emacs.d/ac-dict")
 (setq ac-auto-show-menu 0.2)

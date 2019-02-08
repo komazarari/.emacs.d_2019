@@ -5,6 +5,11 @@
 (edit-server-start)
 (setq edit-server-new-frame nil)
 
+;; ブラウザ環境変数のブラウザでリンクを開く
+(setq browse-url-generic-program
+    (executable-find (getenv "BROWSER"))
+     browse-url-browser-function 'browse-url-generic)
+
 ;; window の alpha 設定する
 (when window-system
   (server-start)

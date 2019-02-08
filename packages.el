@@ -32,6 +32,8 @@
     ace-isearch
     sequential-command ;; M-u,M-l,M-c を使いやすく
     zop-to-char
+    sr-speedbar
+    imenus
     ;; redo+ ;; melpa になくなったので site-lisp に置く
     edit-server
     auto-complete
@@ -57,6 +59,7 @@
     yaml-mode
     groovy-mode
     dockerfile-mode
+    fish-mode
     ;; themes
     color-theme-modern
     monokai-theme

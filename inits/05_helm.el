@@ -25,7 +25,6 @@
 (setq helm-for-files-preferred-list
       '(helm-source-buffers-list
         helm-source-recentf
-        helm-source-ghq
         helm-source-cmd-t-caches
         helm-source-files-in-current-dir
         helm-source-file-cache
@@ -34,7 +33,9 @@
         ;helm-source-bookmark-set
         ;helm-source-locate)
         ))
-
+(when (executable-find "ghq")
+  (setq helm-for-files-preferred-list
+        (append helm-for-files-preferred-list '(helm-source-ghq))))
 
 ;; ace-isearch (isearch + ace-jump
 ;; ace-isearch か下記の isearch-.. かどっちかを有効に

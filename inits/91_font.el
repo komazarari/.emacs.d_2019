@@ -33,6 +33,19 @@
 ;; (90 (window-system)
 ;;   (set-default-font "Ricty Discord-15"))
 
+; 全角かな設定
+(set-fontset-font (frame-parameter nil 'font)
+                  'japanese-jisx0208
+                  (font-spec :family "Source Han Code JP" :size 22))
+; 半角ｶﾅ設定
+(set-fontset-font (frame-parameter nil 'font)
+                  'katakana-jisx0201
+                  (font-spec :family "Source Han Code JP" :size 22))
+; ずれ確認用
+; 0123456789012345678901234567890123456789
+; ｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵｱｲｳｴｵ
+; あいうえおあいうえおあいうえおあいうえお
+
 ; ASCII 文字のフォントをマップする
 ;; (create-fontset-from-ascii-font "Ricty Discord-14" nil "myfont")
 ;; (create-fontset-from-ascii-font "Source Han Code JP R-14" nil "myfont2")

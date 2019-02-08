@@ -17,6 +17,9 @@
 ;; インデント
 (global-set-key "\C-c\C-q" 'indent-region)
 
+;; 対応する括弧を削除
+(global-set-key "\C-c\C-d" 'delete-pair)
+
 ;; Mac の Cmd は meta key として使う
 (when (eq system-type 'darwin)
   (setq ns-command-modifier (quote meta)))
