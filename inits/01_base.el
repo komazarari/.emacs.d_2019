@@ -138,7 +138,11 @@
 ;; C-x SPC で標準でできるのでそちらを使おう
 
 ;; ido (見直す)
+(setq ido-enable-flex-matching 1)
 (ido-mode 1)
+(ido-vertical-mode 1)
+;; (setq ido-vertical-define-keys 'C-n-and-C-p-only)
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 ;; (ido-everywhere 1)
 
 ;; recentf-ext 最近の500fileを保存

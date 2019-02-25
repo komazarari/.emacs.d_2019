@@ -34,6 +34,8 @@
     zop-to-char
     sr-speedbar
     imenus
+    ido-vertical-mode
+    ido-occasional
     ;; redo+ ;; melpa になくなったので site-lisp に置く
     edit-server
     auto-complete
