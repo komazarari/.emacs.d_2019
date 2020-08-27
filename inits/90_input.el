@@ -1,9 +1,18 @@
 (when (executable-find "mozc_emacs_helper.sh")
   ;; mozc from WSL
   (setq mozc-helper-program-name "mozc_emacs_helper.sh")
-  (require 'mozc-im)
-  (require 'mozc-popup)
-  (require 'mozc-cursor-color)
+  (use-package mozc-im :ensure t)
+  (use-package mozc-popup :ensure t)
+  ;(use-package mozc-cursor-color :ensure t)
+
+  ;; 試しに mozc-temp
+  (use-package mozc-temp :ensure t
+    :config
+    (global-set-key (kbd "M-n") #'mozc-temp-convert)
+    (global-set-key (kbd "C-S-SPC") #'mozc-temp-convert-dwim)
+    (global-set-key (kbd "C-\"") #'mozc-temp-convert-dwim)
+    (setq mozc-temp-remove-pre-space nil)
+    )
   (setq default-input-method "japanese-mozc-im")
 
   ;; popupスタイル を使用する
@@ -42,10 +51,10 @@
                     (activate-input-method default-input-method)
                   (deactivate-input-method)))))
   ;; wdired 終了時に IME を OFF にする
-  (require 'wdired)
-  (advice-add 'wdired-finish-edit
-              :after (lambda (&rest args)
-                       (deactivate-input-method)))
+  ;; (require 'wdired)
+  ;; (advice-add 'wdired-finish-edit
+  ;;             :after (lambda (&rest args)
+  ;;                      (deactivate-input-method)))
 
   ;; mozc 関連 helm
   ;; helm でミニバッファの入力時に IME の状態を継承しない
@@ -83,15 +92,5 @@
                        (when (eq (nth 0 args) 'CreateSession)
                          ;; (mozc-session-sendkey '(hiragana)))))
                          (mozc-session-sendkey '(Hankaku/Zenkaku)))))
-
-  ;; 試しに mozc-temp
-  (global-set-key (kbd "M-n") #'mozc-temp-convert)
-  (global-set-key (kbd "C-S-SPC") #'mozc-temp-convert-dwim)
-  (global-set-key (kbd "C-\"") #'mozc-temp-convert-dwim)
-  (setq mozc-temp-remove-pre-space nil)
-
-  ;; ac-mozc も使ってみる
-  (require 'ac-mozc)
-  (define-key ac-mode-map (kbd "C-c C-SPC") 'ac-complete-mozc)
 
   )

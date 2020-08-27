@@ -1,48 +1,40 @@
-;; open-junk-file
-(require 'open-junk-file)
-;; (setq open-junk-file-format "~/junk/%Y-%m-%d.")
-(global-set-key "\C-xj" 'open-junk-file)
-
-(cond ((file-directory-p "~/OneDrive/memos")
-       (setq open-junk-file-format "~/OneDrive/memos/%Y-%m."))
-      ((file-directory-p "~/win/OneDrive/memos")
-       (setq open-junk-file-format "~/win/OneDrive/memos/%Y-%m."))
-      (t
-       (setq open-junk-file-format "~/junk/%Y-%m."))
-      )
-
 ;; google 翻訳
 ;; from http://emacs.rubikitch.com/google-translate/
-(require 'google-translate)
-(defvar google-translate-english-chars "[:ascii:]’“”–"
-  "これらの文字が含まれているときは英語とみなす")
-(defun google-translate-enja-or-jaen (&optional string)
-  "regionか、現在のセンテンスを言語自動判別でGoogle翻訳する。"
-  (interactive)
-  (setq string
-        (cond ((stringp string) string)
-              (current-prefix-arg
-               (read-string "Google Translate: "))
-              ((use-region-p)
-               (buffer-substring (region-beginning) (region-end)))
-              (t
-               (save-excursion
-                 (let (s)
-                   (forward-char 1)
-                   (backward-sentence)
-                   (setq s (point))
-                   (forward-sentence)
-                   (buffer-substring s (point)))))))
-  (let* ((asciip (string-match
-                  (format "\\`[%s]+\\'" google-translate-english-chars)
-                  string)))
-    (run-at-time 0.1 nil 'deactivate-mark)
-    (google-translate-translate
-     (if asciip "en" "ja")
-     (if asciip "ja" "en")
-     string)))
-(global-set-key (kbd "C-c t") 'google-translate-enja-or-jaen)
 
+(use-package google-translate
+  :config
+  (defvar google-translate-english-chars "[:ascii:]’“”–"
+  "これらの文字が含まれているときは英語とみなす")
+  (defun google-translate-enja-or-jaen (&optional string)
+    "regionか、現在のセンテンスを言語自動判別でGoogle翻訳する。"
+    (interactive)
+    (setq string
+          (cond ((stringp string) string)
+                (current-prefix-arg
+                 (read-string "Google Translate: "))
+                ((use-region-p)
+                 (buffer-substring (region-beginning) (region-end)))
+                (t
+                 (save-excursion
+                   (let (s)
+                     (forward-char 1)
+                     (backward-sentence)
+                     (setq s (point))
+                     (forward-sentence)
+                     (buffer-substring s (point)))))))
+    (let* ((asciip (string-match
+                    (format "\\`[%s]+\\'" google-translate-english-chars)
+                    string)))
+      (run-at-time 0.1 nil 'deactivate-mark)
+      (google-translate-translate
+       (if asciip "en" "ja")
+       (if asciip "ja" "en")
+       string)))
+  (global-set-key (kbd "C-c t") 'google-translate-enja-or-jaen)
+  )
+
+
+;;
 (setq org-use-speed-commands t)
 (defun my-ac-mozc-setup ()
   (setq ac-sources
